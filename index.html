@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#04202f">
+
+<!-- PWA manifest -->
+<link rel="manifest" href="./manifest.webmanifest">
+
+<!-- Favicons -->
+<link rel="icon" href="./icons/favicon.ico" sizes="any">
+<link rel="shortcut icon" href="./icons/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+
+<!-- Mobile / installed-app display -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ImOkyy">
+<meta name="msapplication-TileColor" content="#04202f">
+<meta name="application-name" content="ImOkyy">
+<meta name="description" content="Practice dry-land freediving and free diving breath exercises with CO₂ and O₂ tables, a breath-hold timer, box breathing, and personal-best tracking.">
+<meta name="keywords" content="freediving, free diving, freediving breath exercise, free diving breath exercises, breath exercise, breath-hold training, breath-hold timer, CO2 table, O2 table, CO2 training table, O2 training table, box breathing, dry-land breathing practice, apnea training">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ImOkyy">
+<meta property="og:title" content="ImOkyy | Freediving & Free Diving Breath Exercises">
+<meta property="og:description" content="A dry-land breathing practice timer with CO₂ and O₂ tables, breath-hold timing, box breathing, and personal-best tracking.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ImOkyy | Freediving & Free Diving Breath Exercises">
+<meta name="twitter:description" content="Practice dry-land breath exercises with CO₂ and O₂ tables, a breath-hold timer, and box breathing.">
+<title>ImOkyy | Freediving & Free Diving Breath Exercises</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "ImOkyy",
+  "description": "A dry-land freediving and free diving breath exercise timer featuring CO2 and O2 training tables, breath-hold timing, box breathing, and personal-best tracking.",
+  "applicationCategory": "SportsApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript and a modern web browser"
+}
+</script>
+<style>
+:root{--fg:#eaf8ff;--mut:#a9cde0;--bd:rgba(255,255,255,.2);--ac:#38d6ff;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;scrollbar-width:none;-ms-overflow-style:none}*::-webkit-scrollbar{display:none;width:0;height:0}[hidden]{display:none!important}
+body{zoom:.8;margin:0;height:100%;display:flex;flex-direction:column;overflow:hidden;font:15px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--fg);background:#031a28}
+#bg{position:fixed;inset:0;z-index:-2;background:radial-gradient(120% 70% at 75% 0,#0e86ab 0,transparent 60%),linear-gradient(180deg,#0a5675,#06304a 45%,#021320)}
+#bgi{position:absolute;inset:0;background:center/cover no-repeat;opacity:0;transition:opacity .8s}
+#bg::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(2,19,32,.3),rgba(2,19,32,.55))}
+.bub{position:fixed;bottom:-30px;z-index:-1;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.06);animation:rise linear infinite}
+@keyframes rise{to{transform:translateY(-115vh) translateX(20px);opacity:0}}
+.glass{background:rgba(255,255,255,.1);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border:1px solid var(--bd);border-radius:22px;box-shadow:0 8px 30px rgba(0,16,32,.35)}
+@supports not (backdrop-filter:blur(1px)){.glass{background:rgba(8,40,60,.82)}}
+svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+button{font:inherit;color:inherit;cursor:pointer;border:1px solid var(--bd);background:rgba(255,255,255,.1);border-radius:14px;padding:10px 14px;display:inline-flex;align-items:center;justify-content:center;gap:7px;transition:transform .12s,background .2s}
+button:active{transform:scale(.95)}.dis{opacity:.35;pointer-events:none}
+.pri{background:linear-gradient(135deg,#1bb8e8,#2f7fe0);border-color:transparent;font-weight:600}.warn{color:#ff9d9d}.sm{padding:6px 12px;margin-top:8px}
+header{display:flex;justify-content:space-between;align-items:center;padding:10px 16px 4px;max-width:560px;width:100%;margin:auto}
+h1{margin:0;font-size:24px;letter-spacing:.04em;display:flex;align-items:center;gap:8px;background:linear-gradient(90deg,#fff,#7fe4ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1 svg{stroke:#7fe4ff}h2{margin:0;font-size:19px}h3{margin:0 0 10px}
+.ib{width:42px;height:42px;padding:0;border-radius:50%}
+main{flex:1;overflow-y:auto;padding:6px 14px 14px;max-width:560px;width:100%;margin:auto}
+.row{display:flex;justify-content:space-between;align-items:center;margin:6px 2px 10px}
+.seg{display:grid;grid-template-columns:1fr 1fr;padding:4px;gap:4px;margin-bottom:6px;border-radius:16px}.seg button{border:0;background:none;border-radius:12px}.seg .on{background:rgba(255,255,255,.2)}
+.ring{position:relative;width:min(76vw,300px);aspect-ratio:1;margin:10px auto;border-radius:50%;display:grid;place-items:center}
+.ring svg{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke-width:9}.trk{stroke:rgba(255,255,255,.14)}
+#rg{stroke:currentColor;stroke-linecap:round;stroke-dasharray:565.5;transition:stroke-dashoffset .12s linear;filter:drop-shadow(0 0 6px currentColor)}
+.ctr{text-align:center;z-index:1}#lb{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
+#tm{font-size:clamp(46px,16vw,66px);font-weight:700;font-variant-numeric:tabular-nums;line-height:1.05}#sb{font-size:13px;color:var(--mut)}
+.ctl{display:flex;justify-content:center;align-items:center;gap:22px;margin:14px 0 8px}.ctl2{display:flex;justify-content:center;gap:10px;margin-bottom:12px}
+.rb{width:60px;height:60px;border-radius:50%;flex-direction:column;gap:0;padding:0}.rb small{font-size:11px;color:var(--mut)}
+.mb{width:82px;height:82px;border-radius:50%;padding:0;background:linear-gradient(135deg,#1bb8e8,#2f7fe0);border-color:transparent;box-shadow:0 0 24px rgba(56,214,255,.45)}.mb svg{width:32px;height:32px}
+.pill{border-radius:99px;padding:8px 16px}
+.note,.plan,.tbl,.empty{padding:14px 16px;margin-top:10px}.note{text-align:center}.empty{text-align:center;color:var(--mut)}
+.ph{color:var(--mut);font-size:13px;margin-bottom:6px}.pr{display:grid;grid-template-columns:28px 1fr 1fr;gap:6px;padding:7px 8px;border-radius:10px;font-variant-numeric:tabular-nums}.pr.on{background:rgba(56,214,255,.22)}.pr.last{grid-template-columns:28px 1fr}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}th,td{padding:9px 5px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)}th{color:var(--mut);font-weight:500;font-size:13px}
+nav{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:6px;margin:0 12px 10px;max-width:536px;width:calc(100% - 24px);align-self:center}
+nav button{flex-direction:column;gap:2px;border:0;background:none;font-size:12px;padding:8px 2px;color:var(--mut)}nav .on{background:rgba(56,214,255,.22);color:#fff}
+#md{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,12,20,.55);z-index:20;padding:16px}#md.open{display:flex}
+.mc{width:min(100%,380px);padding:20px;max-height:90vh;overflow:auto;background:rgba(10,40,60,.75)}
+.set-section{padding:10px 0;border-top:1px solid rgba(255,255,255,.12)}.set-title{margin:0 0 6px;font-size:14px;color:var(--fg)}
+label{display:block;margin:10px 0;color:var(--mut);font-size:13px}
+input[type=number]{display:block;width:100%;margin-top:5px;padding:10px 12px;font-size:16px;color:#fff;background:rgba(0,0,0,.28);border:1px solid var(--bd);border-radius:12px}
+.ck{display:flex;align-items:center;gap:10px;color:var(--fg);font-size:15px}.ck input{width:20px;height:20px}
+.bt{display:flex;gap:8px;margin-top:14px}.bt>*{flex:1}.bt.wrap{flex-wrap:wrap}.bt.wrap>*{flex:1 1 45%}label.btn{margin:0;border:1px solid var(--bd);background:rgba(255,255,255,.1);border-radius:14px;padding:10px 14px;display:inline-flex;align-items:center;justify-content:center;gap:7px;color:var(--fg);font-size:15px;cursor:pointer}
+.big{font-size:44px;font-weight:700;margin:6px 0;text-align:center}
+#ts{position:fixed;left:50%;bottom:calc(86px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;pointer-events:none;padding:10px 16px;border-radius:99px;background:rgba(6,40,62,.92);border:1px solid var(--bd);transition:.25s;z-index:30;text-align:center}#ts.on{opacity:1;transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){.bub{display:none}*{transition:none!important}}
+</style></head><body>
+<div id="bg"><div id="bgi"></div></div>
+<header><h1><svg class="i" viewBox="0 0 24 24"><path d="M2 8c3-3 5 3 10 0s7-3 10 0M2 14c3-3 5 3 10 0s7-3 10 0M2 20c3-3 5 3 10 0s7-3 10 0"/></svg>ImOkyy</h1><button class="ib glass" id="gen" data-a="gen" aria-label="Settings"></button></header>
+<main id="mn"></main>
+<nav class="glass"></nav>
+<div id="md"></div><div id="ts"></div>
+<script>
+const K='abyssal.v1',$=s=>document.querySelector(s),BG='home.webp';/* set BG to a data: URI of your WebP to embed the background */
+const D={co2:{gap:15,pct:50},o2:{gap:8,pct:80},box:{t:4},g:{prep:10,fwd:10,back:10,snd:true,vib:true}};
+const LIM={co2:{gap:[1,60],pct:[1,100]},o2:{gap:[1,60],pct:[1,100]},box:{t:[1,60]},g:{prep:[1,120],fwd:[1,60],back:[1,60]}};
+const cl=o=>JSON.parse(JSON.stringify(o)),fin=Number.isFinite,fmt=s=>{s=Math.max(0,s|0);return(s/60|0)+':'+String(s%60).padStart(2,'0')};
+const ic=p=>`<svg class="i" viewBox="0 0 24 24">${p}</svg>`;
+const I={gear:ic('<path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/>'),
+plus:ic('<path d="M12 5v14M5 12h14"/>'),minus:ic('<path d="M5 12h14"/>'),play:ic('<path d="M7 4l13 8-13 8z"/>'),pause:ic('<path d="M8 5v14M16 5v14"/>'),stop:ic('<rect x="6" y="6" width="12" height="12" rx="2"/>'),skip:ic('<path d="M5 4l10 8-10 8zM19 5v14"/>'),
+hist:ic('<path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5M12 7v5l4 2"/>'),co2:ic('<path d="M17.5 19H9a7 7 0 1 1 6.7-9h1.8a4.5 4.5 0 1 1 0 9z"/>'),o2:ic('<path d="M12 2.7l5.7 5.7a8 8 0 1 1-11.4 0z"/>'),best:ic('<circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/>'),box:ic('<rect x="3" y="3" width="18" height="18" rx="5"/><path d="M8 12h8"/>'),
+dl:ic('<path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16"/>'),up:ic('<path d="M12 15V3m0 0L8 7m4-4l4 4M4 20h16"/>')};
+let S,tab='co2',sub='train',tt,ac,wl;const E={on:0};
+const fresh=()=>({cfgVersion:2,set:cl(D),h:{co2:[],o2:[],best:[]},ok:0});
+function merge(s){for(const k in D)Object.assign(S.set[k],s.set&&s.set[k]||{});
+ for(const k in S.h){const a=s.h&&s.h[k];S.h[k]=Array.isArray(a)?a.filter(e=>e&&fin(e.ts)&&fin(k==='best'?e.s:e.pb)):[]}
+ for(const sc in LIM)for(const key in LIM[sc]){const[a,b]=LIM[sc][key];let v=Math.round(+S.set[sc][key]);if(!fin(v))v=D[sc][key];S.set[sc][key]=Math.min(b,Math.max(a,v))}
+ S.set.g.snd=!!S.set.g.snd;S.set.g.vib=!!S.set.g.vib}
+function load(){S=fresh();try{const s=JSON.parse(localStorage.getItem(K));if(s){if((s.cfgVersion||1)<2){if(s.set&&s.set.o2&&Number(s.set.o2.gap)===15)s.set.o2.gap=8;s.cfgVersion=2}merge(s);S.ok=s.ok?1:0}}catch(e){}}
+function save(){try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}}
+const pb=()=>Math.max(0,...S.h.best.map(e=>e.s)),need=()=>(tab==='co2'||tab==='o2')&&!pb();
+function plan(k){const c=S.set[k],t=Math.max(1,Math.round(pb()*c.pct/100)),r=[];
+ for(let i=0;i<8;i++)r.push(k==='co2'?{b:Math.max(15,120-c.gap*i),h:t}:{b:120,h:Math.max(Math.min(15,t),t-c.gap*(7-i))});return r}
+function phases(k){const g=S.set.g;
+ if(k==='box'){const t=S.set.box.t;return['Inhale','Hold','Exhale','Hold'].map(l=>({t:'box',l,d:t}))}
+ const a=[{t:'prep',l:'Prepare',d:g.prep}];if(k==='best')return a.concat({t:'up',l:'Hold'});
+ plan(k).forEach((c,i)=>{a.push({t:'hold',l:'Hold',d:c.h,c:i});if(i<7)a.push({t:'breathe',l:'Breathe',d:c.b,c:i})});return a}
+/* feedback */
+function beep(f,d){if(!S.set.g.snd||!ac)return;try{const o=ac.createOscillator(),g=ac.createGain(),n=ac.currentTime;o.frequency.value=f;g.gain.setValueAtTime(.0001,n);g.gain.exponentialRampToValueAtTime(.3,n+.01);g.gain.exponentialRampToValueAtTime(.0001,n+d);o.connect(g).connect(ac.destination);o.start();o.stop(n+d+.02)}catch(e){}}
+const vib=p=>{if(S.set.g.vib&&navigator.vibrate)navigator.vibrate(p)};
+async function wake(on){try{if(on&&navigator.wakeLock){wl=await navigator.wakeLock.request('screen');wl.addEventListener('release',()=>wl=null)}else if(wl){await wl.release();wl=null}}catch(e){}}
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&E.on&&!wl)wake(1)});
+function toast(m){const t=$('#ts');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),2600)}
+function modal(h,dismissible=false){const m=$('#md');m.innerHTML='<div class="mc glass">'+h+'</div>';m.dataset.dismissible=dismissible?'true':'false';m.classList.add('open')}
+const close=()=>{const m=$('#md');m.classList.remove('open');m.dataset.dismissible='false'};
+$('#md').addEventListener('click',e=>{const m=e.currentTarget;if(e.target===m&&m.dataset.dismissible==='true')close()});
+function ask(t,f){E.yes=f;modal(`<p>${t}</p><div class="bt"><button class="pri" data-a="yes">Confirm</button><button data-a="close">Cancel</button></div>`)}
+/* engine */
+function start(){try{ac=ac||new(window.AudioContext||window.webkitAudioContext)();ac.resume()}catch(e){}
+ Object.assign(E,{k:tab,ph:phases(tab),i:-1,on:1,fin:0,paused:0,holds:0,rd:1,pm:0,s0:Date.now()});wake(1);next()}
+function cue(q){if(q.t==='hold'||q.t==='up'){beep(880,.3);vib(250)}else if(q.t==='breathe'){beep(520,.2);vib([120,60,120])}else beep(q.t==='prep'?440:520,.12)}
+function next(early){const p=E.ph[E.i];if(p&&p.t==='hold'&&!early)E.holds++;E.i++;
+ if(E.i>=E.ph.length){if(E.k==='box'){E.i=0;E.rd++}else return done()}
+ const q=E.ph[E.i],n=Date.now();E.t0=n;E.lastS=0;if(q.d){E.end=n+q.d*1000;E.tot=q.d}
+ cue(q);document.querySelectorAll('.pr').forEach((e,i)=>e.classList.toggle('on',q.c===i));ui();draw()}
+function done(){E.i=E.ph.length-1;E.fin=1;E.paused=1;E.pt=Date.now();beep(880,.6);vib([300,100,300]);ui();endModal()}
+function tick(){if(!E.on||E.paused)return;const q=E.ph[E.i];if(q.t==='up')return draw();
+ const rem=(E.end-Date.now())/1000;if(rem<=0)return next();
+ const s=Math.ceil(rem);if(s<=3&&s!==E.lastS&&E.k!=='box'){E.lastS=s;beep(700,.07);vib(40)}draw()}
+function draw(){const r=$('#rg'),q=E.ph&&E.ph[E.i];if(!r||!E.on||!q)return;const now=E.paused?E.pt:Date.now();let fr,tx,col,sb;
+ if(q.t==='up'){const el=(now-E.t0)/1000,b=pb();fr=b?Math.min(el/b,1):(el%60)/60;tx=fmt(Math.floor(el));col=b&&el>=b?'hsl(45 95% 58%)':'hsl(190 90% 60%)';sb='Best '+fmt(b)}
+ else{const rem=Math.max(0,(E.end-now)/1000);fr=rem/E.tot;tx=fmt(Math.ceil(rem));col=`hsl(${Math.round(120*Math.min(1,fr))} 85% 55%)`;
+  sb=q.c!=null?`Cycle ${q.c+1} of 8`:E.k==='box'?'Round '+E.rd:'Get ready'}
+ r.style.strokeDashoffset=565.5*(1-fr);r.style.color=col;$('#lb').textContent=E.paused&&!E.fin?'Paused':q.l;$('#tm').textContent=tx;$('#sb').textContent=sb}
+function adj(d){if(!E.on||E.fin||E.ph[E.i].t==='up')return;E.end+=d*1000;const now=E.paused?E.pt:Date.now(),rem=(E.end-now)/1000;
+ if(rem<=0){if(!E.paused)return next();E.end=now+1000}else if(rem>E.tot)E.tot=rem;draw()}
+const pauseNow=()=>{E.paused=1;E.pt=Date.now()};
+function resume(){const d=Date.now()-E.pt;E.end+=d;E.t0+=d;E.pm+=d;E.paused=0}
+function main(){if(!E.on){if(!need())start();return}if(E.fin)return;E.paused?resume():pauseNow();ui();draw()}
+function stop(){if(!E.on||E.fin)return;if(!E.paused)pauseNow();draw();if(E.k==='box'||E.ph[E.i].t==='prep')return reset();endModal();ui()}
+function reset(){E.on=0;E.fin=0;E.paused=0;wake(0);render()}
+function endModal(){const k=E.k;modal(k==='best'?`<h3>Hold stopped</h3><div class="big">${fmt(Math.floor((E.pt-E.t0)/1000))}</div>`:`<h3>${E.fin?'Session complete':'End session?'}</h3><p>${E.holds} of 8 holds completed.</p>`+'<p style="color:var(--mut)">Save this practice to history?</p>')
+ ;$('#md .mc').insertAdjacentHTML('beforeend',`<div class="bt"><button class="pri" data-a="svr">Save</button><button data-a="dsc">Discard</button>${E.fin?'':'<button data-a="res">Resume</button>'}</div>`)}
+function saveRes(){const k=E.k,n=Date.now();let m='Saved';
+ if(k==='best'){const s=Math.floor((E.pt-E.t0)/1000);if(s>0){if(s>pb())m='New personal best! '+fmt(s);S.h.best.push({ts:n,s})}else m='Nothing to save'}
+ else S.h[k].push({ts:n,pb:pb(),pct:S.set[k].pct,gap:S.set[k].gap,n:E.holds,dur:Math.round((E.pt-E.s0-E.pm)/1000)});
+ save();close();reset();toast(m)}
+/* views */
+function ui(){const on=E.on&&!E.fin,q=on&&E.ph[E.i],g=(s,f)=>{const e=$(s);if(e)f(e)};
+ g('#mb',e=>{e.innerHTML=on&&!E.paused?I.pause:I.play;e.classList.toggle('dis',!on&&need())});g('#st',e=>e.classList.toggle('dis',!on));
+ g('#bk',e=>e.classList.toggle('dis',!q||q.t==='up'));g('#fw',e=>e.classList.toggle('dis',!q||q.t==='up'));g('#sk',e=>e.hidden=!(q&&q.t==='hold'))}
+function idle(){const r=$('#rg');if(!r)return;r.style.strokeDashoffset=0;r.style.color='hsl(190 90% 60%)';$('#lb').textContent='Ready';
+ $('#tm').textContent=fmt(tab==='box'?S.set.box.t:S.set.g.prep);$('#sb').textContent=tab==='best'?'Personal best '+fmt(pb()):tab==='box'?Array(4).fill(S.set.box.t).join('-'):'Prepare countdown';ui()}
+function train(k){const g=S.set.g,n=need();
+ let h=n?`<div class="glass note">Record a best time first — your tables are built from it.<br><button class="pri sm" data-a="tab" data-v="best">Go to Best Time</button></div>`:'';
+ h+=`<div class="ring glass"><svg viewBox="0 0 200 200"><circle class="trk" cx="100" cy="100" r="90"/><circle id="rg" cx="100" cy="100" r="90" transform="rotate(-90 100 100)"/></svg><div class="ctr"><div id="lb"></div><div id="tm"></div><div id="sb"></div></div></div>`;
+ h+=`<div class="ctl"><button class="rb" id="bk" data-a="back" aria-label="Backward">${I.minus}<small>${g.back}s</small></button><button class="mb" id="mb" data-a="main" aria-label="Start or pause"></button><button class="rb" id="fw" data-a="fwd" aria-label="Forward">${I.plus}<small>${g.fwd}s</small></button></div>`;
+ h+=`<div class="ctl2"><button class="pill" id="st" data-a="stop">${I.stop} Stop</button><button class="pill" id="sk" data-a="skip" hidden>${I.skip} End hold early</button></div>`;
+ if((k==='co2'||k==='o2')&&!n){const c=S.set[k];h+=`<div class="glass plan"><div class="ph">Hold target ${c.pct}% of ${fmt(pb())} · gap ${c.gap}s</div>${plan(k).map((r,i)=>`<div class="pr${i===7?' last':''}"><b>${i+1}</b><span>Hold ${fmt(r.h)}</span>${i===7?'':`<span>Breathe ${fmt(r.b)}</span>`}</div>`).join('')}</div>`}
+ return h}
+function hist(k){const a=S.h[k].slice().reverse(),dt=t=>new Date(t).toLocaleString([],{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
+ if(!a.length)return`<div class="glass empty">No history yet. Finish a session and choose Save.</div>`;
+ if(k==='best')return`<div class="glass tbl"><div class="ph">Personal best ${fmt(pb())}</div><table><tr><th>Date</th><th>Hold</th></tr>${a.map(e=>`<tr><td>${dt(e.ts)}</td><td>${fmt(e.s)}</td></tr>`).join('')}</table></div>`;
+ return`<div class="glass tbl"><table><tr><th>Date</th><th>Best</th><th>%</th><th>Gap</th><th>Holds</th></tr>${a.map(e=>`<tr><td>${dt(e.ts)}</td><td>${fmt(e.pb)}</td><td>${e.pct}</td><td>${e.gap}s</td><td>${e.n}/8${e.n===8?' ✓':''}</td></tr>`).join('')}</table></div>`}
+function render(){const T={co2:'CO₂ Table',o2:'O₂ Table',best:'Best Time',box:'Box Breathing'}[tab];
+ let h=`<div class="row"><h2>${T}</h2></div>`;
+ if(tab!=='box')h+=`<div class="seg glass">${[['train','Train',I.play],['history','History',I.hist]].map(x=>`<button data-a="sub" data-v="${x[0]}" class="${sub===x[0]?'on':''}">${x[2]}${x[1]}</button>`).join('')}</div>`;
+ const hs=tab!=='box'&&sub==='history';h+=hs?hist(tab):train(tab);$('#mn').innerHTML=h;
+ document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===tab));if(!hs)idle()}
+/* settings */
+const fld=(p,l,a,b)=>{const[s,k]=p.split('.');return`<label>${l}<input type="number" inputmode="numeric" min="${a}" max="${b}" data-p="${p}" value="${S.set[s][k]}"></label>`},
+chk=(p,l)=>{const[s,k]=p.split('.');return`<label class="ck"><input type="checkbox" data-p="${p}"${S.set[s][k]?' checked':''}>${l}</label>`};
+const saveBtns='<div class="bt"><button class="pri" data-a="ss">Save</button><button data-a="close">Cancel</button></div>';
+function settings(){modal(`<h3>Settings</h3>
+ <section class="set-section"><h4 class="set-title">CO₂ Table</h4>${fld('co2.gap','Gap between cycles (seconds, 1–60)',1,60)}${fld('co2.pct','Percent of best time (1–100)',1,100)}</section>
+ <section class="set-section"><h4 class="set-title">O₂ Table</h4>${fld('o2.gap','Gap between cycles (seconds, 1–60)',1,60)}${fld('o2.pct','Percent of best time (1–100)',1,100)}</section>
+ <section class="set-section"><h4 class="set-title">Box Breathing</h4>${fld('box.t','Seconds per phase (inhale / hold / exhale / hold)',1,60)}</section>
+ <section class="set-section"><h4 class="set-title">General</h4>${fld('g.prep','Prepare time (seconds)',1,120)}${fld('g.fwd','Forward button adds (seconds)',1,60)}${fld('g.back','Backward button subtracts (seconds)',1,60)}${chk('g.snd','Sound cues')}${chk('g.vib','Vibration')}</section>
+ <div class="bt wrap"><button data-a="exp">${I.dl} Export JSON</button><label class="btn">${I.up} Import JSON<input type="file" id="imp" accept=".json,application/json" hidden></label><button class="warn" data-a="clr">Clear history</button><button class="warn" data-a="rst">Reset settings</button></div>`+saveBtns,true)}
+function saveSet(){document.querySelectorAll('#md input[data-p]').forEach(i=>{const[s,k]=i.dataset.p.split('.');if(i.type==='checkbox')S.set[s][k]=i.checked;else{const[a,b]=LIM[s][k];let v=Math.round(+i.value);if(!fin(v)||i.value==='')v=D[s][k];S.set[s][k]=Math.min(b,Math.max(a,v))}});save();close();render()}
+async function exp(){try{const dl=await claude.use('downloads');if(!dl)return toast('Export isn’t available in this view');
+ await dl.save({filename:'abyssal-'+new Date().toISOString().slice(0,10)+'.json',data:new Blob([JSON.stringify({app:'abyssal',v:1,set:S.set,h:S.h},null,2)],{type:'application/json'})})}catch(e){if(!e||e.code!=='declined')toast('Export isn’t available in this view')}}
+document.addEventListener('change',async e=>{if(e.target.id!=='imp')return;const f=e.target.files[0];if(!f)return;
+ try{const o=JSON.parse(await f.text());if(!o||typeof o.set!=='object'||typeof o.h!=='object')throw 0;ask('Replace all current data with this file?',()=>{S=fresh();merge(o);S.ok=1;save();close();render();toast('Imported')})}catch(x){toast('That isn’t a valid ImOkyy backup')}});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-a]');if(!b||b.classList.contains('dis'))return;const v=b.dataset.v,busy=()=>E.on&&(toast('Stop the session first'),1);
+ switch(b.dataset.a){
+ case'tab':if(busy())return;tab=v;sub='train';render();break;
+ case'sub':if(busy())return;sub=v;render();break;
+ case'gen':if(busy())return;settings();break;
+ case'main':main();break;case'stop':stop();break;case'back':adj(-S.set.g.back);break;case'fwd':adj(S.set.g.fwd);break;case'skip':if(!E.paused)next(1);break;
+ case'close':close();break;case'ss':saveSet();break;case'svr':saveRes();break;case'dsc':close();reset();break;case'res':close();resume();ui();draw();break;
+ case'exp':exp();break;
+ case'clr':ask('Clear all CO₂, O₂ and best-time history? Your settings stay as they are.',()=>{S.h={co2:[],o2:[],best:[]};save();close();render();toast('History cleared')});break;
+ case'rst':ask('Reset all settings to their defaults?',()=>{S.set=cl(D);save();close();render()});break;
+ case'yes':{const f=E.yes;E.yes=null;f&&f()}break;
+ case'ok':S.ok=1;save();close();break}});
+/* init */
+load();
+$('#gen').innerHTML=I.gear;
+$('nav').innerHTML=[['co2','CO₂'],['o2','O₂'],['best','Best'],['box','Box']].map(x=>`<button data-a="tab" data-v="${x[0]}">${I[x[0]]}${x[1]}</button>`).join('');
+for(let i=0;i<9;i++){const b=document.createElement('span'),s=6+Math.random()*16;b.className='bub';b.style.cssText=`width:${s}px;height:${s}px;left:${Math.random()*100}%;animation-duration:${9+Math.random()*10}s;animation-delay:${-Math.random()*14}s`;document.body.appendChild(b)}
+if(BG){const i=$('#bgi');i.style.backgroundImage=`url(${BG})`;i.style.opacity=.7}
+render();
+if(!S.ok)modal('<h3>Before you start</h3><p>Dry-land training only. Never practise breath-holds in or near water, never train alone, and never hyperventilate beforehand.</p><div class="bt"><button class="pri" data-a="ok">I understand</button></div>');
+setInterval(tick,100);
+</script>
+<script>
+// Register the service worker so ImOkyy can be installed and work offline.
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js", { scope: "./" })
+      .catch(error => console.error("ImOkyy service worker registration failed:", error));
+  });
+}
+</script>
+</body></html>

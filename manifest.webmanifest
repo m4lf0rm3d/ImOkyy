@@ -1,0 +1,29 @@
+{
+    "id": "./",
+    "name": "ImOkyy | Freediving & Breath Exercises",
+    "short_name": "ImOkyy",
+    "description": "Freediving breath exercises, CO2 and O2 training tables, breath-hold timer and box breathing.",
+    "start_url": "./",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#031a28",
+    "theme_color": "#04202f",
+    "categories": [
+        "health",
+        "sports",
+        "fitness"
+    ],
+    "icons": [
+        {
+            "src": "./icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
